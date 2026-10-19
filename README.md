@@ -2,6 +2,8 @@
 
 A terminal idle game about turning a broom cupboard into the Molar Empire. Treat patients, hire staff, and upgrade your clinic! Built in Python for [HackClub](https://hackclub.com/)'s [wrongtool](https://wrong.hackclub.com/) program.
 
+![screenshot](https://cdn.hackclub.com/01a15631-a9c4-7d33-9512-5d9a5c70fa7d/image.png)
+
 ## How to play
 
 Download and extract the project, then open a terminal in the folder containing `main.py`.
@@ -21,23 +23,23 @@ The game uses Pytohn's standard library, included `curses`, on these platforms.
 Install the dependencies then launch the game:
 
 ```powershell
-py -m pip install -r requirements.txt
-py main.py
+python -m pip install -r requirements.txt
+python main.py
 ```
 
 `requirements.py` installs [windows-curses](https://pypi.org/project/windows-curses/). The game also includes a native Windows console input backend. Because I developed this primarily in Linux, there may be some errors in the Windows version. I didn't want to exclude a Windows release, so I tried my hardest to add support for it. If there are any bugs please let me know!
 
 On a fresh save, the main menu will ask if you want to Continue, start a New Game, Replay Tutorial, edit Settings or Quit. Once a save exists, launching the game opens directly into the most recently saved slot. There are three (3) save slots.
 
-You can use `python3 main.py --menu` to open the menu instead, or just press `M` anytime during play. On Windows replace `python3` with `py`.
+You can use `python3 main.py --menu` to open the menu instead, or just press `M` anytime during play. On Windows replace `python3` with `python`.
 
 ## Basic gameplay
 
-1. Start the tutorial and treat patients on the Clinic page. Follow the prompts, use SPACE (or mouse click on certain terminals) to treat patients.
-2. Open the Staff page with F and hire your first dentist for $25. These are your source of passive income. It is an idle game after all.
-3. Open Contracts with O to claim completed goals, and Cases with A to accept patients for rewards.
+1. Start the tutorial and treat patients on the Clinic page. Follow the prompts, use `SPACE` (or mouse click on certain terminals) to treat patients.
+2. Open the Staff page with `F` and hire your first dentist for $25. These are your source of passive income. It is an idle game after all.
+3. Open Contracts with `O` to claim completed goals, and Cases with `A` to accept patients for rewards.
 4. After 10 manual treatments, press X to activate Focus mode. You can also craft equipment in the Workshop with W.
-5. Save up to expand your clinic. Once you have enough, press E to unlock a new clinic with boosted rewards.
+5. Save up to expand your clinic. Once you have enough, press `E` to unlock a new clinic with boosted rewards.
 6. Prestige once you earn $100,000 in a run. Prestiging resets your progress, but you get stars that you can use to get new boosts and upgrades.
 
 ## What's in the game?
