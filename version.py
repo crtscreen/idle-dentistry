@@ -1,0 +1,3 @@
+APP_NAME = "Idle Dentistry"
+APP_VERSION = "1.0.0"
+SAVE_VERSION = 1

@@ -1,0 +1,662 @@
+{
+  "version": 1,
+  "rarity_weights": {
+    "Common": 60,
+    "Uncommon": 25,
+    "Rare": 10,
+    "Epic": 4,
+    "Legendary": 1
+  },
+  "items": [
+    {
+      "key": "mint_cup",
+      "name": "Mint Rinse Cup",
+      "rarity": "Common",
+      "description": "The colour of a very optimistic mouthwash.",
+      "enabled": true,
+      "art": [
+        "  ______  ",
+        " / MINT \\ ",
+        " | ~~~~ | ",
+        "  \\____/  "
+      ]
+    },
+    {
+      "key": "bent_spoon",
+      "name": "Bent Waiting-Room Spoon",
+      "rarity": "Common",
+      "description": "Nobody knows why the dentist has a spoon.",
+      "enabled": true,
+      "art": [
+        "   .---.  ",
+        "  (_____) ",
+        "     |__  ",
+        "        | "
+      ]
+    },
+    {
+      "key": "tooth_sticker",
+      "name": "Smiling Tooth Sticker",
+      "rarity": "Common",
+      "description": "Saved for brave patients.",
+      "enabled": true,
+      "art": [
+        "  /\\__/\\  ",
+        " (  ^ ^ ) ",
+        "  \\_v__/  ",
+        "   U  U   "
+      ]
+    },
+    {
+      "key": "old_magazine",
+      "name": "Magazine from 2006",
+      "rarity": "Common",
+      "description": "The cover claims flip phones are the future...",
+      "enabled": true,
+      "art": [
+        "  _______ ",
+        " | 2006  |",
+        " | NEWS! |",
+        " |_______|"
+      ]
+    },
+    {
+      "key": "blue_bib",
+      "name": "Sky-Blue Bib",
+      "rarity": "Common",
+      "description": "Formal wear for a very small appointment.",
+      "enabled": true,
+      "art": [
+        "  o     o ",
+        " / \\___/ \\",
+        "|  BLUE   |",
+        " \\_______/ "
+      ]
+    },
+    {
+      "key": "floss_spool",
+      "name": "Emergency Floss Spool",
+      "rarity": "Common",
+      "description": "For decorative emergencies only.",
+      "enabled": true,
+      "art": [
+        "   _____  ",
+        "  / o o \\ ",
+        "  |FLOSS|--",
+        "  \\_____/ "
+      ]
+    },
+    {
+      "key": "rubber_duck",
+      "name": "Reception Rubber Duck",
+      "rarity": "Common",
+      "description": "Excellent listener. Terrible receptionist.",
+      "enabled": true,
+      "art": [
+        "    __    ",
+        " __(\">    ",
+        "(  > )    ",
+        " ~~~~     "
+      ]
+    },
+    {
+      "key": "tooth_eraser",
+      "name": "Molar Eraser",
+      "rarity": "Common",
+      "description": "Removes pencil marks.",
+      "enabled": true,
+      "art": [
+        "   _____  ",
+        "  /TOOTH/|",
+        " /_____/ |",
+        " |_____|/ "
+      ]
+    },
+    {
+      "key": "pencil_cup",
+      "name": "Toothbrush Pencil Cup",
+      "rarity": "Common",
+      "description": "It's a cup for pencils.. what else?",
+      "enabled": true,
+      "art": [
+        "  / / /   ",
+        " | | |    ",
+        " | PEN |  ",
+        " |_____|  "
+      ]
+    },
+    {
+      "key": "paper_crown",
+      "name": "Paper Crown",
+      "rarity": "Common",
+      "description": "The most affordable crown in the practice.",
+      "enabled": true,
+      "art": [
+        " \\ /\\ /\\ /",
+        "  V  V  V ",
+        "  |PAPER| ",
+        "  |_____| "
+      ]
+    },
+    {
+      "key": "mint_tin",
+      "name": "Empty Mint Tin",
+      "rarity": "Common",
+      "description": "Please take one on your way out.",
+      "enabled": true,
+      "art": [
+        "  .-----. ",
+        " / MINT /|",
+        " |-----| |",
+        " |_____|/ "
+      ]
+    },
+    {
+      "key": "appointment_card",
+      "name": "Vintage Appointment Card",
+      "rarity": "Common",
+      "description": "Your next visit was apparently yesterday.",
+      "enabled": true,
+      "art": [
+        " .--------. ",
+        " | APPT.  | ",
+        " | 12:30  | ",
+        " '--------' "
+      ]
+    },
+    {
+      "key": "polka_cushion",
+      "name": "Polka-Dot Cushion",
+      "rarity": "Common",
+      "description": "This cushion belongs in a vintage auction.",
+      "enabled": true,
+      "art": [
+        "  .------. ",
+        " / o  o  \\ ",
+        " |  o  o | ",
+        " \\______/  "
+      ]
+    },
+    {
+      "key": "tiny_cactus",
+      "name": "Tiny Desk Cactus",
+      "rarity": "Common",
+      "description": "Not a comforting decoration for a dental practice.",
+      "enabled": true,
+      "art": [
+        "   _  |   ",
+        "  | |_|   ",
+        "  |___|_  ",
+        "   [___]  "
+      ]
+    },
+    {
+      "key": "brush_keyring",
+      "name": "Toothbrush Keyring",
+      "rarity": "Common",
+      "description": "Decorative. Does not open crates or cabinets.",
+      "enabled": true,
+      "art": [
+        "  (O)     ",
+        "   |   |||",
+        "   +===|||",
+        "       |||"
+      ]
+    },
+    {
+      "key": "crooked_frame",
+      "name": "Crooked Smile Frame",
+      "rarity": "Common",
+      "description": "The photo is straight. The frame disagrees.",
+      "enabled": true,
+      "art": [
+        "   /----/| ",
+        "  / :) / | ",
+        " /____/ /  ",
+        " |____|/   "
+      ]
+    },
+    {
+      "key": "squeaky_bell",
+      "name": "Squeaky Desk Bell",
+      "rarity": "Common",
+      "description": "Please squeak for assistance.",
+      "enabled": true,
+      "art": [
+        "     o    ",
+        "   .---.  ",
+        "  /     \\ ",
+        " [=======]"
+      ]
+    },
+    {
+      "key": "striped_socks",
+      "name": "Striped Chair Socks",
+      "rarity": "Common",
+      "description": "Four little socks for one waiting-room chair.",
+      "enabled": true,
+      "art": [
+        "  |#| |#| ",
+        "  |=| |=| ",
+        " _|#|_|#| ",
+        "|___|___| "
+      ]
+    },
+    {
+      "key": "smile_mug",
+      "name": "World's Okayest Dentist Mug",
+      "rarity": "Common",
+      "description": "World's Best Dentist.",
+      "enabled": true,
+      "art": [
+        "   _____  ",
+        "  | OK! |)",
+        "  |  :) | ",
+        "  |_____| "
+      ]
+    },
+    {
+      "key": "receipt_origami",
+      "name": "Receipt Origami Crane",
+      "rarity": "Common",
+      "description": "Folded from a remarkably long receipt.",
+      "enabled": true,
+      "art": [
+        "       /| ",
+        "  /\\__/ | ",
+        " /  /\\__> ",
+        " \\/  \\/   "
+      ]
+    },
+    {
+      "key": "pearl_bib",
+      "name": "Pearlescent Bib",
+      "rarity": "Uncommon",
+      "description": "Catches the light. And toothpaste.",
+      "enabled": true,
+      "art": [
+        "   o   o   ",
+        "  / \\_/ \\  ",
+        " | * . * | ",
+        "  \\_____/  "
+      ]
+    },
+    {
+      "key": "molar_planter",
+      "name": "Molar Planter",
+      "rarity": "Uncommon",
+      "description": "Finally, a tooth with healthy roots.",
+      "enabled": true,
+      "art": [
+        "    \\|/   ",
+        "   --*--  ",
+        "  /\\__ /\\ ",
+        "  \\_U_U_/ "
+      ]
+    },
+    {
+      "key": "retro_poster",
+      "name": "Retro Flossing Poster",
+      "rarity": "Uncommon",
+      "description": "Why is everything in this place so old.",
+      "enabled": true,
+      "art": [
+        " .--------. ",
+        " | FLOSS! | ",
+        " |  1987  | ",
+        " '--------' "
+      ]
+    },
+    {
+      "key": "aquarium_castle",
+      "name": "Aquarium Castle",
+      "rarity": "Uncommon",
+      "description": "Do fish need dentists?",
+      "enabled": true,
+      "art": [
+        "  |_| |_|  ",
+        "  | | | |  ",
+        "  | |_| |  ",
+        "  |__n__|  "
+      ]
+    },
+    {
+      "key": "lavender_clock",
+      "name": "Lavender Wall Clock",
+      "rarity": "Uncommon",
+      "description": "It's always brush o'clock.",
+      "enabled": true,
+      "art": [
+        "   .----.  ",
+        "  / 12   \\ ",
+        " |9  |  3| ",
+        "  \\_6___/  "
+      ]
+    },
+    {
+      "key": "checker_clipboard",
+      "name": "Checkerboard Clipboard",
+      "rarity": "Uncommon",
+      "description": "For extremely competitive paperwork.",
+      "enabled": true,
+      "art": [
+        "   [====]  ",
+        "  |# # # | ",
+        "  | # # #| ",
+        "  |______| "
+      ]
+    },
+    {
+      "key": "rainbow_brush",
+      "name": "Rainbow Display Brush",
+      "rarity": "Uncommon",
+      "description": "What even is the point of having this.",
+      "enabled": true,
+      "art": [
+        " [|||||||] ",
+        " [=======] ",
+        "     ||    ",
+        "     ||    "
+      ]
+    },
+    {
+      "key": "tooth_fairy_sign",
+      "name": "Tooth Fairy Parking Sign",
+      "rarity": "Uncommon",
+      "description": "All other fairies will be towed.",
+      "enabled": true,
+      "art": [
+        " .--------. ",
+        " | FAIRY P| ",
+        " '---||---' ",
+        "     ||     "
+      ]
+    },
+    {
+      "key": "velvet_rope",
+      "name": "Tiny Velvet Queue Rope",
+      "rarity": "Uncommon",
+      "description": "The magazine stand has become exclusive.",
+      "enabled": true,
+      "art": [
+        "  O      O  ",
+        "  |~~~~~~|  ",
+        "  |      |  ",
+        " _|_    _|_ "
+      ]
+    },
+    {
+      "key": "smile_pin",
+      "name": "Enamel Smile Pin",
+      "rarity": "Uncommon",
+      "description": "A lapel-sized vote of confidence.",
+      "enabled": true,
+      "art": [
+        "    .--.   ",
+        "   ( :) )  ",
+        "    \\__/   ",
+        "     ||    "
+      ]
+    },
+    {
+      "key": "brass_plaque",
+      "name": "Brass Reception Plaque",
+      "rarity": "Uncommon",
+      "description": "Please take a seat, in a much fancier font.",
+      "enabled": true,
+      "art": [
+        " .--------. ",
+        " | PLEASE | ",
+        " |  SIT   | ",
+        " '--------' "
+      ]
+    },
+    {
+      "key": "marble_tray",
+      "name": "Marbled Display Tray",
+      "rarity": "Uncommon",
+      "description": "Makes a paper cup look expensive.",
+      "enabled": true,
+      "art": [
+        "  ________  ",
+        " / ~  ~  /| ",
+        "/_______/ | ",
+        "|_______|/  "
+      ]
+    },
+    {
+      "key": "neon_molar",
+      "name": "Neon Molar Sign",
+      "rarity": "Rare",
+      "description": "A bright idea with unusually deep roots.",
+      "enabled": true,
+      "art": [
+        " * /\\__/\\ * ",
+        "  | o  o |  ",
+        " * \\_U_U/ * ",
+        "  --NEON--  "
+      ]
+    },
+    {
+      "key": "galaxy_bib",
+      "name": "Galaxy-Print Bib",
+      "rarity": "Rare",
+      "description": "A small step for teeth, a giant leap for laundry.",
+      "enabled": true,
+      "art": [
+        "   o   o   ",
+        "  / \\_/ \\  ",
+        " | * . + | ",
+        "  \\__*__/  "
+      ]
+    },
+    {
+      "key": "chrome_duck",
+      "name": "Chrome Reception Duck",
+      "rarity": "Rare",
+      "description": "Reflects on its responsibilities.",
+      "enabled": true,
+      "art": [
+        "   * __    ",
+        "  __(\"> * ",
+        " ( // )    ",
+        " *~~~~~    "
+      ]
+    },
+    {
+      "key": "art_deco_lamp",
+      "name": "Art Deco Display Lamp",
+      "rarity": "Rare",
+      "description": "Dramatic lighting for ordinary forms.",
+      "enabled": true,
+      "art": [
+        "   /====\\  ",
+        "  /______\\ ",
+        "     ||     ",
+        "   __||__   "
+      ]
+    },
+    {
+      "key": "bonsai_brush",
+      "name": "Toothbrush Bonsai",
+      "rarity": "Rare",
+      "description": "Pruned twice a day. Display only.",
+      "enabled": true,
+      "art": [
+        "    _&&_    ",
+        "  _(&&&&)_  ",
+        "    \\||/    ",
+        "   [======] "
+      ]
+    },
+    {
+      "key": "hologram_card",
+      "name": "Holographic Business Card",
+      "rarity": "Rare",
+      "description": "Let's see Paul Allen's card.",
+      "enabled": true,
+      "art": [
+        " * .------. ",
+        "   | / / /| ",
+        "   |/ / / | ",
+        " * '------' "
+      ]
+    },
+    {
+      "key": "crystal_hourglass",
+      "name": "Crystal Waiting Hourglass",
+      "rarity": "Rare",
+      "description": "For decorative waiting. Never times appointments.",
+      "enabled": true,
+      "art": [
+        "  +------+ ",
+        "   \\ .. /  ",
+        "   / .. \\  ",
+        "  +------+ "
+      ]
+    },
+    {
+      "key": "ceramic_dragon",
+      "name": "Ceramic Floss Dragon",
+      "rarity": "Rare",
+      "description": "Guards a very small hoard of dental floss.",
+      "enabled": true,
+      "art": [
+        "  /\\   /\\  ",
+        " (o \\_/  > ",
+        "  \\_==__/  ",
+        "    /  \\   "
+      ]
+    },
+    {
+      "key": "mosaic_molar",
+      "name": "Mosaic Molar Portrait",
+      "rarity": "Rare",
+      "description": "One tooth, several hundred tiny tiles.",
+      "enabled": true,
+      "art": [
+        "  /#\\__/#\\ ",
+        " |# # # #| ",
+        "  \\#_#_#/  ",
+        "   U   U   "
+      ]
+    },
+    {
+      "key": "moon_chair",
+      "name": "Moonlight Chair Model",
+      "rarity": "Rare",
+      "description": "A miniature chair for miniature astronauts.",
+      "enabled": true,
+      "art": [
+        "  (  |~~~| ",
+        "     |___| ",
+        "     |___| ",
+        "     |   | "
+      ]
+    },
+    {
+      "key": "aurora_sign",
+      "name": "Aurora Smile Sign",
+      "rarity": "Epic",
+      "description": "The northern lights, above reception.",
+      "enabled": true,
+      "art": [
+        " ~*~~*~~*~ ",
+        " | SMILE | ",
+        " | ~~~~~ | ",
+        " ~*~~*~~*~ "
+      ]
+    },
+    {
+      "key": "royal_crown",
+      "name": "Royal Porcelain Crown",
+      "rarity": "Epic",
+      "description": "Too large for a tooth. Perfect for a shelf.",
+      "enabled": true,
+      "art": [
+        " *  /\\  *  ",
+        " |\\/  \\/|  ",
+        " | o  o |  ",
+        " |======|  "
+      ]
+    },
+    {
+      "key": "clockwork_tooth",
+      "name": "Clockwork Tooth Model",
+      "rarity": "Epic",
+      "description": "An elaborate machine that accomplishes smiling.",
+      "enabled": true,
+      "art": [
+        "  /\\__/\\  ",
+        " | O==O | ",
+        "  \\_+__/  ",
+        "   U  U   "
+      ]
+    },
+    {
+      "key": "cosmic_aquarium",
+      "name": "Cosmic Aquarium Diorama",
+      "rarity": "Epic",
+      "description": "Its tiny fish appear to orbit the reception desk.",
+      "enabled": true,
+      "art": [
+        " .--------. ",
+        " |*  ><o .| ",
+        " | o><  * | ",
+        " '--------' "
+      ]
+    },
+    {
+      "key": "opal_mirror",
+      "name": "Opal Display Mirror",
+      "rarity": "Epic",
+      "description": "A reflection with excellent taste.",
+      "enabled": true,
+      "art": [
+        "   .----.  ",
+        "  / / / /\\ ",
+        "  \\_/_/_/  ",
+        "     ||    "
+      ]
+    },
+    {
+      "key": "velvet_molar",
+      "name": "Velvet Molar Throne",
+      "rarity": "Epic",
+      "description": "A tiny throne for the tooth in charge.",
+      "enabled": true,
+      "art": [
+        "  | /\\/\\ | ",
+        "  |( o o)| ",
+        " [|__UU_|] ",
+        "  |______| "
+      ]
+    },
+    {
+      "key": "golden_molar",
+      "name": "The Golden Molar",
+      "rarity": "Legendary",
+      "description": "A legendary tooth with absolutely no income bonus.",
+      "enabled": true,
+      "art": [
+        " * /\\__/\\ * ",
+        "  | $  $ |  ",
+        " * \\_U_U/ * ",
+        "  [ GOLD ]  "
+      ]
+    },
+    {
+      "key": "fairy_wings",
+      "name": "Tooth Fairy's Glass Wings",
+      "rarity": "Legendary",
+      "description": "Left behind after an exceptionally tidy appointment.",
+      "enabled": true,
+      "art": [
+        "  /\\    /\\  ",
+        " (  \\  /  ) ",
+        "  \\  oo  /  ",
+        "   \\/  \\/   "
+      ]
+    }
+  ]
+}

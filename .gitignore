@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+save.json
+save.json.*
+*.lock
+*.py[cod]
+.venv/
+venv/
+save*.json
+*.json.bak
+*.json.archive-*
+*.json.invalid-*
+balance-*.csv
