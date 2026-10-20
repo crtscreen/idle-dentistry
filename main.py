@@ -9,7 +9,7 @@ from version import APP_NAME, APP_VERSION
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--save", type=Path, default=Path(__file__).with_name("save.json"),
-                        help="Slot 1 path; other slots and preferences use this filename as a prefix")
+                        help="Slot 1 path. Other slots and preferences use this filename as a prefix")
     startup = parser.add_mutually_exclusive_group()
     startup.add_argument("--play", action="store_true", help="Continue slot 1 immediately")
     parser.add_argument("--safe-input", action="store_true",

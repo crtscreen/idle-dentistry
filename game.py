@@ -422,7 +422,7 @@ def decode_save(data):
     if not isinstance(data, dict):
         raise ValueError("Save must contain an object")
     if type(data.get("version")) is not int or data["version"] != SAVE_VERSION:
-        raise ValueError(f"Unsupported save format; expected version {SAVE_VERSION}")
+        raise ValueError(f"Unsupported save format, expected version {SAVE_VERSION}")
     s = State()
     for name in ("money", "lifetime", "run_earned", "play_seconds", "saved_at"):
         setattr(s, name, _number(data, name))
@@ -520,7 +520,7 @@ def load_game(path: Path, now=None):
         def elapsed(value):
             return f"{int(value) // 3600}h {int(value) % 3600 // 60:02d}m"
         warnings.append(f"While away: {elapsed(away)}. Earned ${amount:,.2f}.")
-        warnings.append(f"Paid time: {elapsed(seconds)}; offline cap {state.offline_cap // 3600}h. No timed bonuses offline.")
+        warnings.append(f"Paid time: {elapsed(seconds)}. Offline cap {state.offline_cap // 3600}h. No timed bonuses offline.")
     return state, warnings
 
 

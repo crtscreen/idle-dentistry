@@ -255,7 +255,7 @@ class UI(InventoryUI):
             x, y = 2 + (index % 3) * 18, 8 + (index // 3) * 2
             self.put(y, x, f"{index + 1}: {label}", reverse=index == self.selected, limit=16)
         if s.cabinet_active:
-            status = f"Shields: {board['shields']} | 2 spoiled packages; 7 prizes"
+            status = f"Shields: {board['shields']} | 2 spoiled packages. 7 prizes"
             control = "Up/Down or 1-9 select | ENTER reveal | / finish"
         else:
             status = ("Last search: " + board["status"] + ". Prizes kept." if board else
@@ -478,7 +478,7 @@ class UI(InventoryUI):
 
     def status_banner(self):
         if self.session.paused:
-            banner, colour = f"PAUSED - {self.key('pause')} resumes", "bad"
+            banner, colour = f"PAUSED - {self.key('pause')} to resume", "bad"
         elif self.state.tutorial_status == "active":
             banner, colour = self.tutorial_hint(), "gold"
         elif self.session.event:

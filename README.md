@@ -1,6 +1,6 @@
 # Idle Dentistry
 
-A terminal idle game about turning a broom cupboard into the Molar Empire. Treat patients, hire staff, and upgrade your clinic! Built in Python for [HackClub](https://hackclub.com/)'s [wrongtool](https://wrong.hackclub.com/) program.
+A terminal idle game about turning a broom cupboard into the Molar Empire. Treat patients, hire staff, and upgrade your clinic! Built in Python for [HackClub](https://hackclub.com/)'s [wrong tool](https://wrong.hackclub.com/) program.
 
 ![screenshot](https://cdn.hackclub.com/01a15631-a9c4-7d33-9512-5d9a5c70fa7d/image.png)
 

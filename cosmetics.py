@@ -1,4 +1,3 @@
-"""Load the editable catalogue once; saved collections refer to stable item keys."""
 from dataclasses import dataclass
 from functools import lru_cache
 import json
@@ -87,7 +86,7 @@ def get_cosmetic(key):
     if key in ITEM_BY_KEY:
         return ITEM_BY_KEY[key]
     return Cosmetic(key, "Retired item", "Retired",
-                    "Removed from the catalogue. Your copies are kept; restoring its key restores the item.",
+                    "Removed from the catalogue. Your copies are kept. Restoring its key restores the item.",
                     RETIRED_ART, False)
 
 def roll_cosmetic(rng=None):
