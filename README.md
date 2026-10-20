@@ -59,6 +59,12 @@ You can use `python3 main.py --menu` to open the menu instead, or just press `M`
   - You can view cosmetics in the collection, and put your favourite one on display in the clinic.
   - Cosmetics give no stat bonuses. I added them because unboxing stuff is cool lol.
 
+As you can tell, I took inspiration from a couple of games when adding these features. When trying to come up with features I could add to an idle game, I opened my phone and realised that I already play a game called [Idle Slayer](https://store.steampowered.com/app/1353300/Idle_Slayer/).
+
+Idle Slayer has very slow progression, but when you "ascend" a few times it becomes a little faster. The game also promotes somewhat active play with the "quests", "workshop", and "crafting" features. I took inspiration from this and added the Contracts, Equipment, Workshop features to my own game. The supply cabinet minigame is also inspired by the chest hunt in Idle Slayer.
+
+The crate opening feature was something I thought of when coding the supply cabinet minigame. I wanted (needed, actually, because I had to put more hours into development) to add something fun that seemed out of place in an idle game. I enjoy playing Counter Strike, and so I thought "what if I could open cases?", because obviously Counter Strike is a game about unboxing skins. I'm really happy with the finished feature and it just makes me want to open cases all day.
+
 ## Controls
 
 Each page shows its controls. I'm not gonna list them all out here because it'd be unnecessarily long. You can also change controls through the settings menu in-game.
@@ -97,6 +103,6 @@ python3 main.py --check-cosmetics
 python3 simulate_balance.py --seconds 3600 --taps-per-second 0.5
 ```
 
-The simulator compares three buying strategies and reports when they reach expansion and prestige milestones. It estimates progression rather than measuring a player's actual play time. Add `--csv balance-results.csv` to export its results, or `--baseline` to compare without Focus, crafting and Cabinet searches. This feature was added to test balance when I was looking at progression.
+The simulator compares three buying strategies and reports when they reach expansion and prestige milestones. It is used for estimating progression was added to test balance. Add `--csv balance-results.csv` to export its results, or `--baseline` to compare without Focus, crafting and Cabinet searches.
 
-Cosmetics live in `data/cosmetics.json`. Each item has a stable key, name, rarity, description and up to four lines of ASCII artwork, each at most 14 characters wide. You can add your cosmetics if you wish. Use `--check-cosmetics` after editing. Disabling an item stops new drops; already owned copies remain available. The catalogue's `version: 1` describes its own data format.
+Cosmetics are stored in `data/cosmetics.json`. Each item has a stable key, name, rarity, description and up to four lines of ASCII artwork, each at most 14 characters wide. You can add your cosmetics if you wish. Use `--check-cosmetics` after editing. Disabling an item stops new drops, but copies you already own remain available. The catalogue's `version: 1` describes its own data format.
