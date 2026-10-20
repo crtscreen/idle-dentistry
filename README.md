@@ -2,7 +2,7 @@
 
 A terminal idle game about turning a broom cupboard into the Molar Empire. Treat patients, hire staff, and upgrade your clinic! Built in Python for [HackClub](https://hackclub.com/)'s [wrong tool](https://wrong.hackclub.com/) program.
 
-![screenshot](https://cdn.hackclub.com/01a15631-a9c4-7d33-9512-5d9a5c70fa7d/image.png)
+![clinic page](https://cdn.hackclub.com/01a15732-a4ee-77c5-b23a-51d46a27f2a6/image.png)
 
 ## How to play
 
@@ -64,6 +64,8 @@ As you can tell, I took inspiration from a couple of games when adding these fea
 Idle Slayer has very slow progression, but when you "ascend" a few times it becomes a little faster. The game also promotes somewhat active play with the "quests", "workshop", and "crafting" features. I took inspiration from this and added the Contracts, Equipment, Workshop features to my own game. The supply cabinet minigame is also inspired by the chest hunt in Idle Slayer.
 
 The crate opening feature was something I thought of when coding the supply cabinet minigame. I wanted (needed, actually, because I had to put more hours into development) to add something fun that seemed out of place in an idle game. I enjoy playing Counter Strike, and so I thought "what if I could open cases?", because obviously Counter Strike is a game about unboxing skins. I'm really happy with the finished feature and it just makes me want to open cases all day.
+
+![crate opening](https://cdn.hackclub.com/01a15631-a9c4-7d33-9512-5d9a5c70fa7d/image.png)
 
 ## Controls
 
