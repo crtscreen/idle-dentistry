@@ -59,9 +59,15 @@ You can use `python3 main.py --menu` to open the menu instead, or just press `M`
   - You can view cosmetics in the collection, and put your favourite one on display in the clinic.
   - Cosmetics give no stat bonuses. I added them because unboxing stuff is cool lol.
 
+### Inspiration
+
 As you can tell, I took inspiration from a couple of games when adding these features. When trying to come up with features I could add to an idle game, I opened my phone and realised that I already play a game called [Idle Slayer](https://store.steampowered.com/app/1353300/Idle_Slayer/).
 
 Idle Slayer has very slow progression, but when you "ascend" a few times it becomes a little faster. The game also promotes somewhat active play with the "quests", "workshop", and "crafting" features. I took inspiration from this and added the Contracts, Equipment, Workshop features to my own game. The supply cabinet minigame is also inspired by the chest hunt in Idle Slayer.
+
+<p align="center">
+  <img src="https://media1.tenor.com/m/YMJClCmllbYAAAAd/ohnepixel-titan-holo.gif" alt="titan holo titan holo ">
+</p>
 
 The crate opening feature was something I thought of when coding the supply cabinet minigame. I wanted (needed, actually, because I had to put more hours into development) to add something fun that seemed out of place in an idle game. I enjoy playing Counter Strike, and so I thought "what if I could open cases?", because obviously Counter Strike is a game about unboxing skins. I'm really happy with the finished feature and it just makes me want to open cases all day.
 
