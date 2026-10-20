@@ -8,7 +8,7 @@ A terminal idle game about turning a broom cupboard into the Molar Empire. Treat
 
 Download and extract the [latest release](https://github.com/crtscreen/idle-dentistry/releases/latest), then open a terminal in the folder containing `main.py`.
 
-Use Python 3.12 or newer and an interactive terminal. The needs at least 60 columns x 22 rows. Having a larger window leaves more room for descriptions and title art. You can also use the integrated terminal in a code editor (but honestly why would you).
+Use Python 3.12 or newer and an interactive terminal. The terminal needs at least 60 columns x 22 rows. Having a larger window leaves more room for descriptions and title art. You can also use the integrated terminal in a code editor (but honestly why would you).
 
 ### Linux / macOS
 
@@ -16,7 +16,7 @@ Use Python 3.12 or newer and an interactive terminal. The needs at least 60 colu
 python3 main.py
 ```
 
-The game uses Pytohn's standard library, included `curses`, on these platforms.
+The game uses Python's standard library, included `curses`, on these platforms.
 
 ### Windows
 
@@ -27,7 +27,7 @@ python -m pip install -r requirements.txt
 python main.py
 ```
 
-`requirements.py` installs [windows-curses](https://pypi.org/project/windows-curses/). The game also includes a native Windows console input backend. Because I developed this primarily in Linux, there may be some errors in the Windows version. I didn't want to exclude a Windows release, so I tried my hardest to add support for it. If there are any bugs please let me know!
+`requirements.txt` installs [windows-curses](https://pypi.org/project/windows-curses/). The game also includes a native Windows console input backend. Because I developed this primarily in Linux, there may be some errors in the Windows version. I didn't want to exclude a Windows release, so I tried my hardest to add support for it. If there are any bugs please let me know!
 
 On a fresh save, the main menu will ask if you want to Continue, start a New Game, Replay Tutorial, edit Settings or Quit. Once a save exists, launching the game opens directly into the most recently saved slot. There are three (3) save slots.
 
