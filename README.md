@@ -6,7 +6,7 @@ A terminal idle game about turning a broom cupboard into the Molar Empire. Treat
 
 ## How to play
 
-Download and extract the project, then open a terminal in the folder containing `main.py`.
+Download and extract the [latest release](https://github.com/crtscreen/idle-dentistry/releases/latest/download/idle-dentistry.zip), then open a terminal in the folder containing `main.py`.
 
 Use Python 3.12 or newer and an interactive terminal. The needs at least 60 columns x 22 rows. Having a larger window leaves more room for descriptions and title art. You can also use the integrated terminal in a code editor (but honestly why would you).
 
