@@ -22,6 +22,10 @@ def parse_args():
     server.add_argument("--port", type=int, default=8022)
     server.add_argument("--max-players", type=int, default=8)
     server.add_argument("--idle-minutes", type=int, default=30)
+    server.add_argument("--max-accounts", type=int, default=1000,
+                        help="Stop self-registration at this many accounts (default: 1000)")
+    server.add_argument("--closed-registration", action="store_true",
+                        help="Only allow players registered by the administrator")
     args = parser.parse_args()
     if args.command == "serve":
         if not 1 <= args.port <= 65535:
@@ -30,17 +34,21 @@ def parse_args():
             parser.error("Max players must be between 1 and 64.")
         if not 1 <= args.idle_minutes <= 1440:
             parser.error("Idle minutes must be between 1 and 1440.")
+        if not 1 <= args.max_accounts <= 100000:
+            parser.error("Max accounts must be between 1 and 100000.")
     return args
 
 async def serve(accounts, args):
     import asyncssh
     from platform_support import save_lock
     from ssh_terminal import GameTerminal
+    from ssh_accounts import SignupLimiter
 
     active = set()
     connections = set()
     handlers = set()
     stopping = asyncio.Event()
+    signups = SignupLimiter()
 
     class GameServer(asyncssh.SSHServer):
         def connection_made(self, connection):
@@ -56,13 +64,20 @@ async def serve(accounts, args):
 
         def begin_auth(self, username):
             self.key = accounts.public_key(username)
+            self.can_register = not args.closed_registration and accounts.available(username)
+            self.candidate_key = None
             return True
 
         def public_key_auth_supported(self):
             return True
 
         def validate_public_key(self, username, key):
-            return self.key is not None and key == self.key
+            allowed = key == self.key if self.key is not None else self.can_register
+            self.candidate_key = key if allowed else None
+            return allowed
+
+        def auth_completed(self):
+            self.connection.set_extra_info(player_key=self.candidate_key)
 
     def refuse(process, message):
         process.stderr.write((message + "\r\n").encode())
@@ -85,6 +100,35 @@ async def serve(accounts, args):
         if len(active) >= args.max_players:
             refuse(process, "Max player count reached. Try again later!")
             return
+
+        key = process.get_extra_info("player_key")
+        try:
+            if key is None:
+                raise ValueError("Connect with your player SSH key")
+            current = accounts.public_key(username)
+            if current is not None:
+                if current != key:
+                    raise ValueError("That player name is already registered to another key.")
+            else:
+                if args.closed_registration:
+                    raise ValueError("Self-registration is closed right now :(")
+                address = process.get_extra_info("peername", ("unknown",))[0]
+                if not signups.allowed(address):
+                    raise ValueError("Signup limit reached. Please try again in a while.")
+                if accounts.register(username, key, args.max_accounts):
+                    signups.record(address)
+                    LOG.info("Registered player %s", username)
+        except RuntimeError:
+            refuse(process, "Registration is busy right now. Please reconnect later.")
+            return
+        except ValueError as exc:
+            refuse(process, str(exc))
+            return
+        except OSError:
+            LOG.exception("Could not register player %s", username)
+            refuse(process, "Could not save your account right now :( try again later...")
+            return
+        
         active.add(username)
         handler = asyncio.current_task()
         handlers.add(handler)
@@ -213,7 +257,7 @@ def main():
         return 1
     os.umask(0o077)
     accounts = Accounts(args.data_dir)
-    logging.basicConfig(level=logging.INFO, format="%s(asctime)s %(name)s: %(message)s")
+    logging.basicConfig(level=logging.INFO, format="%(asctime)s %(name)s: %(message)s")
     try:
         if args.command == "init":
             print("Server fingerprint:", accounts.initialise())

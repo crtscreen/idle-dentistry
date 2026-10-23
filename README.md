@@ -6,7 +6,34 @@ A terminal idle game about turning a broom cupboard into the Molar Empire. Treat
 
 ## How to play
 
-UPDATE: you can now play this game over SSH! TODO: add ssh address here, this is being committed so i can set up the azure server...
+You can play this game over SSH or locally. SSH is the recommended way to play since you won't have to download anything on your computer. Also, most future development will be based around SSH (planning to add multiplayer support!)
+
+### Play over SSH
+
+If you don't already have a player key, create one on your own computer:
+
+```sh
+ssh-keygen -t ed25519 -f ~/.ssh/idle_dentistry
+```
+
+If that file already exists you can use your existing key.
+
+> [!CAUTION]
+> Keep the private key on your computer. **PLEASE DON'T LOSE THIS**.
+
+You can then connect with:
+
+```sh
+ssh -t -p 8022 -i ~/.ssh/idle_dentistry -o IdentitiesOnly=yes YOUR_USERNAME@172.204.144.49
+```
+
+Replace `YOUR_USERNAME` with anything you like, as long as it meets the following requirements:
+
+1. Must be 1-24 characters
+2. Only contain lowercase letters, digits, `_` or `-`
+3. Must start with with a letter.
+
+### Play locally
 
 Download and extract the [latest release](https://github.com/crtscreen/idle-dentistry/releases/latest), then open a terminal in the folder containing `main.py`.
 

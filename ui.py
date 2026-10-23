@@ -408,7 +408,7 @@ class UI(InventoryUI):
 
     def tutorial_hint(self):
         k = self.key
-        prompts = [f"Treat a patient with {k('treat')} / click; K skips.",
+        prompts = [f"Treat a patient with {k('treat')} / click. Press K to skip this tutorial.",
                    f"Hire your first dentist: {k('staff')} then 1 ($25).",
                    f"Visit upgrades: {k('upgrades')}. Prices and effects appear below.",
                    f"Visit contracts: {k('contracts')}. ENTER claims a ready goal.",
