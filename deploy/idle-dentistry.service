@@ -1,0 +1,17 @@
+[Unit]
+Description=Idle Dentistry over SSH
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/idle-dentistry
+ExecStart=%h/idle-dentistry/.venv/bin/python %h/idle-dentistry/ssh_server.py --data-dir %h/.local/share/idle-dentistry serve --host 0.0.0.0 --port 8022
+Restart=on-failure
+RestartSec=5
+KillMode=mixed
+TimeoutStopSec=15
+UMask=0077
+NoNewPrivileges=true
+
+[Install]
+WantedBy=default.target

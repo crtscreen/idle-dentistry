@@ -1,6 +1,7 @@
 import argparse
 from pathlib import Path
 import sys
+import shutdown
 
 from settings import load_settings
 from platform_support import save_lock
@@ -54,12 +55,12 @@ def main():
         slot = 0 if args.play or recent is None else recent
         message = notice
         direct = args.play or (recent is not None and not args.menu)
-        while True:
+        while not shutdown.requested():
             action, slot = ("continue", slot) if direct else main_menu(
                 screen, paths, settings, preferences_path, slot, not args.no_color, message)
             direct = False
             message = ""
-            if action == "quit":
+            if action == "quit" or shutdown.requested():
                 return
             path = paths[slot]
             try:
@@ -81,7 +82,8 @@ def main():
             except (OSError, ValueError, RuntimeError) as exc:
                 message = str(exc)
     try:
-        curses.wrapper(application)
+        with shutdown.handle_signals():
+            curses.wrapper(application)
     except KeyboardInterrupt:
         print("Game closed. Active progress saved.")
     except (OSError, ValueError, RuntimeError, EOFError, curses.error) as exc:

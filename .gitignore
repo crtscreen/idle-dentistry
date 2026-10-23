@@ -11,3 +11,5 @@ save*.json
 *.json.archive-*
 *.json.invalid-*
 balance-*.csv
+.ssh-server/
+idle-dentistry.zip

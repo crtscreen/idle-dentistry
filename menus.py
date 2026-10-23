@@ -2,6 +2,7 @@ import curses
 import json
 import shutil
 import time
+import shutdown
 
 from game import CLINICS, decode_save
 from settings import CLOCKS, DEFAULT_KEYS, THEMES, save_settings
@@ -102,7 +103,7 @@ def edit_settings(screen, settings, path, colour=True):
     rebinding = None
     message = "Changes are saved immediately. Press ESC to return to the menu."
     actions = list(DEFAULT_KEYS)
-    while True:
+    while not shutdown.requested():
         lines = [f"Theme: {settings.theme}", f"Reduced animation: {'ON' if settings.reduced_animation else 'OFF'}",
                  f"Clock: {settings.clock}", "Restore default controls"] + [f"{a.title():<12} {settings.label(a)}" for a in actions]
         draw(screen, "SETTINGS", lines, selected, "Navigation / Enter / Esc / Y / N / K stay fixed.",
@@ -190,7 +191,7 @@ def main_menu(screen, paths, settings, settings_path, slot=0, colour=True, messa
     selected = 0
     confirming = False
     summary = slot_summary(paths[slot])
-    while True:
+    while not shutdown.requested():
         lines = ["Continue", "New Game", "Replay tutorial", "Settings", "Quit"]
         draw(screen, f"SLOT {slot + 1}/3", lines, selected,
              "Left/Right: save slot | " + paths[slot].name, settings, colour,
@@ -218,3 +219,4 @@ def main_menu(screen, paths, settings, settings_path, slot=0, colour=True, messa
                 edit_settings(screen, settings, settings_path, colour)
             else:
                 return {0: "continue", 2: "tutorial", 4: "quit"}[selected], slot
+    return "quit", slot

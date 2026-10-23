@@ -3,6 +3,7 @@ import math
 import os
 import time
 import textwrap
+import shutdown
 
 from game import (ACHIEVEMENTS, CLINICS, STAFF, UPGRADES, SKILLS,
                   PRESTIGE_AT, Session, save_game)
@@ -813,10 +814,10 @@ class UI(InventoryUI):
         self.reader = TerminalInput()
         previous = time.monotonic()
         running = True
-        self.render()
         try:
+            self.render()
             with self.reader as reader:
-                while running:
+                while running and not shutdown.requested():
                     now = time.monotonic()
                     self.session.tick(now - previous)
                     previous = now
