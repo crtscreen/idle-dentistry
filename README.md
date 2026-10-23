@@ -77,7 +77,7 @@ You can use `python3 main.py --menu` to open the menu instead, or just press `M`
 
 ## Basic gameplay
 
-1. Start the tutorial and treat patients on the Clinic page. Follow the prompts, use `SPACE` (or mouse click on certain terminals) to treat patients.
+1. Start the tutorial and treat patients on the Clinic page. Follow the prompts, use `SPACE` (or mouse click if you're playing over SSH on Windows) to treat patients.
 2. Open the Staff page with `F` and hire your first dentist for $25. These are your source of passive income. It is an idle game after all.
 3. Open Contracts with `O` to claim completed goals, and Cases with `A` to accept patients for rewards.
 4. After 10 manual treatments, press X to activate Focus mode. You can also craft equipment in the Workshop with W.
