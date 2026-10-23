@@ -10,6 +10,10 @@ You can play this game over SSH or locally. SSH is the recommended way to play s
 
 ### Play over SSH
 
+The instructions for this are different for Windows and Linux/macOS.
+
+#### Linux/macOS
+
 If you don't already have a player key, create one on your own computer:
 
 ```sh
@@ -17,6 +21,15 @@ ssh-keygen -t ed25519 -f ~/.ssh/idle_dentistry
 ```
 
 If that file already exists you can use your existing key.
+
+#### Windows
+
+In PowerShell:
+
+```powershell
+New-Item -ItemType Directory -Force "$env:USERPROFILE\.ssh"
+ssh-keygen -t ed25519 -f "$env:USERPROFILE\.ssh\idle_dentistry"
+```
 
 > [!CAUTION]
 > Keep the private key on your computer. **PLEASE DON'T LOSE THIS**.
