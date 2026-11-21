@@ -1,3 +1,4 @@
+import os
 import argparse
 from pathlib import Path
 import sys
@@ -7,10 +8,26 @@ from settings import load_settings
 from platform_support import save_lock
 from version import APP_NAME, APP_VERSION
 
+def default_save_path():
+    if not getattr(sys, "frozen", False):
+        return Path(__file__).with_name("save.json")
+
+    if sys.platform == "win32":
+        local_data = os.environ.get("LOCALAPPDATA")
+        directory = Path(local_data) if local_data else Path.home() / "AppData" / "Local"
+    elif sys.platform == "darwin":
+        directory = Path.home() / "Library" / "Application Support"
+    else:
+        xdg_data = os.environ.get("XDG_DATA_HOME")
+        directory = Path(xdg_data) if xdg_data else Path.home() / ".local" / "share"
+        if not directory.is_absolute():
+            directory = Path.home() / ".local" / "share"
+
+    return directory / "idle-dentistry" / "save.json"
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--save", type=Path, default=Path(__file__).with_name("save.json"),
-                        help="Slot 1 path. Other slots and preferences use this filename as a prefix")
+    parser.add_argument("--save", type=Path, help="Slot 1 path. Other slots and preferences use this filename as a prefix")
     startup = parser.add_mutually_exclusive_group()
     startup.add_argument("--play", action="store_true", help="Continue slot 1 immediately")
     parser.add_argument("--safe-input", action="store_true",
@@ -45,7 +62,9 @@ def main():
         return 1
     from menus import archive_slot, latest_save_slot, main_menu, slot_paths
     from ui import UI
-    base = args.save.expanduser().resolve()
+    base = (
+        args.save if args.save is not None else default_save_path()
+    ).expanduser().resolve()
     preferences_path = base.with_name(base.stem + "-settings.json")
     settings, notice = load_settings(preferences_path)
     paths = slot_paths(base)
